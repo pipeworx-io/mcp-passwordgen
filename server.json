@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/passwordgen",
   "title": "Passwordgen",
   "description": "Secure password generator MCP.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/passwordgen",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-passwordgen",
