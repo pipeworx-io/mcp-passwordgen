@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-passwordgen",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Secure password generator MCP.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-passwordgen": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "passwordgen"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-passwordgen.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/passwordgen",
   "pipeworx": {
-    "sourceHash": "v1-cc11fd4d1ae72f4a76d67a8e7df49aa129fdc290dbc0a6b15286bca970cde4a6",
-    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
+    "mode": "gateway",
+    "slug": "passwordgen",
+    "gatewaySlug": "passwordgen",
+    "sourceHash": "v1-4e81b9bc687bc57185cc5eb2458679b0f0b00909cbe67a926511ed22e14feb4f",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }
